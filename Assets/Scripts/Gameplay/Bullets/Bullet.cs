@@ -31,6 +31,7 @@ public class Bullet : MonoBehaviour
         if (other.TryGetComponent<IHitable>(out var hitable))
         {
             hitable.Hit();
+            gameObject.SetActive(false);
         }
     }
 
